@@ -1,7 +1,4 @@
-console.log('hello');
 
-const computeroutput=getComputerChoice();
-console.log("computer choice:", computeroutput);
 
 function getComputerChoice(){
     const Choices=['rock', 'paper' ,'scissors'];
