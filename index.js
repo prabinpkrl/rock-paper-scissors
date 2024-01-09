@@ -9,6 +9,7 @@ let playerScore=0;
 let computerScore=0;
 let resultss;
 
+//function to select player choice and show result
 
 function playRound(playerSelect){
     
