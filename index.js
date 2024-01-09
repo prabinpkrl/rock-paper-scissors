@@ -7,6 +7,7 @@ const computerCount=document.getElementById('computercount');
 const winOrLose=document.getElementById('winorlose');
 let playerScore=0;
 let computerScore=0;
+let resultss;
 
 
 function playRound(playerSelect){
