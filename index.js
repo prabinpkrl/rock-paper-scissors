@@ -26,7 +26,7 @@ function playRound(playerSelect){
         result='player wins';
 
     }
-    else if(playerSelect==='scissors' && computerselect==='paper'){
+    else if(playerSelect ==='scissors' && computerselect ==='paper'){
         result='player wins';
 
     }
@@ -38,7 +38,9 @@ function playRound(playerSelect){
     playerChoice.textContent=`PLAYER: ${playerSelect}`;
     computerChoice.textContent=`COMPUTER: ${computerselect}`;
     resultDisplay.textContent=result;
+
     checkWinner(result);
+    
     playerCount.textContent= 'Player Win:'+ playerScore;
     computerCount.textContent= 'computer Win:'+ computerScore;
 
@@ -68,7 +70,7 @@ function win(playerPoint,computerPoint){
     }
 }
 function restart(){
-    
+
 
 }
 
