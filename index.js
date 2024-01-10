@@ -20,19 +20,19 @@ function playRound(playerSelect){
     }
     else if(playerSelect==='rock' && computerselect==='scissors'){
         result='player wins';
-        playerScore++;
+
     }
     else if(playerSelect==='paper' && computerselect==='rock'){
         result='player wins';
-        playerScore++;
+
     }
     else if(playerSelect==='scissors' && computerselect==='paper'){
         result='player wins';
-        playerScore++;
+
     }
     else{
         result='player lose!!';
-        computerScore++;
+        
     }
     
     playerChoice.textContent=`PLAYER: ${playerSelect}`;
@@ -41,13 +41,31 @@ function playRound(playerSelect){
     playerCount.textContent= 'Player Win:'+ playerScore;
     computerCount.textContent= 'computer Win:'+ computerScore;
 
-    if(playerScore === 5){
-        winOrLose.textContent= 'Yay! YOU WIN';
+   checkWinner(result);
+
+}
+
+function checkWinner(resultCheck){
+    if(resultCheck === 'player wins'){
+        playerScore++;
+        win(playerScore);
     }
-    else{
-        winOrLose.textContent= 'SAD! YOU LOSE';
+    if(resultCheck === 'player lose!!'){
+        computerScore++;
+        win(computerScore);
     }
 
+}
+
+function win(points){
+    if(points === 5){
+        winOrLose.textContent= 'You win!!';
+        
+    }
+    else{
+        winOrLose.textContent= 'You loose!!';
+
+    }
 }
 
 
