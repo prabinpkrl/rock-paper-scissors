@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Rock-Paper-Scissor</title>
     <script src="index.js" defer></script>
 </head>
 <body>
-    <div id="playerselect">PLAYER:</div>
-    <div id="computerselect">COMPUTER:</div>
-    
+    <div class="select">
+        <div id="playerselect">PLAYER</div>
+        <div id="computerselect">COMPUTER</div>
+    </div>
     <div class="choice">
         <button onclick="playRound('rock')">Rock</button>
         <button onclick="playRound('paper')">Paper</button>
         <button onclick="playRound('scissor')">Scissor</button>
         
     </div>
-    <div id="resultdisplay"></div>
-    <div id="playercount"></div>
-    <div id="computercount"></div>
-    <div id="winorlose"></div>
+    <div class="display">
+        <div id="resultdisplay"></div>
+        <div id="playercount"></div>
+        <div id="computercount"></div>
+        <div id="winorlose"></div>
+        <!-- <button onclick="restart()">Reset</button> -->
+    </div>
+    
 
     
     
