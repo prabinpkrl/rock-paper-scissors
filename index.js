@@ -5,9 +5,10 @@ const resultDisplay=document.getElementById('resultdisplay');
 const playerCount=document.getElementById('playercount');
 const computerCount=document.getElementById('computercount');
 const winOrLose=document.getElementById('winorlose');
+// const buttonResult=document.querySelector('#buttonresult');
 let playerScore=0;
 let computerScore=0;
-let resultss;
+
 
 //function to select player choice and show result
 
@@ -35,14 +36,14 @@ function playRound(playerSelect){
         
     }
     
-    playerChoice.textContent=`PLAYER: ${playerSelect}`;
-    computerChoice.textContent=`COMPUTER: ${computerselect}`;
+    playerChoice.textContent=`PLAYER ${playerSelect}`;
+    computerChoice.textContent=`COMPUTER ${computerselect}`;
     resultDisplay.textContent=result;
 
     checkWinner(result);
     
-    playerCount.textContent= 'Player Win:'+ playerScore;
-    computerCount.textContent= 'computer Win:'+ computerScore;
+    playerCount.textContent= 'Player Win: '+ playerScore;
+    computerCount.textContent= 'computer Win: '+ computerScore;
 
 
 }
@@ -63,15 +64,18 @@ function win(playerPoint,computerPoint){
     if(playerPoint === 5){
         winOrLose.textContent= 'You win!!';
         
+        
     }
     if(computerPoint === 5){
         winOrLose.textContent= 'You loose!!';
-
+        
     }
+    
+    
 }
 function restart(){
-
-
+    location.reload;
+    
 }
 
 
