@@ -38,34 +38,38 @@ function playRound(playerSelect){
     playerChoice.textContent=`PLAYER: ${playerSelect}`;
     computerChoice.textContent=`COMPUTER: ${computerselect}`;
     resultDisplay.textContent=result;
+    checkWinner(result);
     playerCount.textContent= 'Player Win:'+ playerScore;
     computerCount.textContent= 'computer Win:'+ computerScore;
 
-   checkWinner(result);
 
 }
 
 function checkWinner(resultCheck){
     if(resultCheck === 'player wins'){
-        playerScore++;
-        win(playerScore);
+        ++playerScore;
+        
     }
     if(resultCheck === 'player lose!!'){
-        computerScore++;
-        win(computerScore);
+        ++computerScore;
+        
     }
-
+    win(playerScore,computerScore);
 }
 
-function win(points){
-    if(points === 5){
+function win(playerPoint,computerPoint){
+    if(playerPoint === 5){
         winOrLose.textContent= 'You win!!';
         
     }
-    else{
+    if(computerPoint === 5){
         winOrLose.textContent= 'You loose!!';
 
     }
+}
+function restart(){
+    
+
 }
 
 
