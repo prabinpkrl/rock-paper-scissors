@@ -7,26 +7,26 @@ const computerCount=document.getElementById('computercount');
 const winOrLose=document.getElementById('winorlose');
 let playerScore=0;
 let computerScore=0;
-let resultss;
+let results;
 
 //function to select player choice and show result
 
 function playRound(playerSelect){
     
-    const computerselect=Choices[(Math.floor(Math.random()*Choices.length))];
+    const computerSelect=Choices[(Math.floor(Math.random()*Choices.length))];
     let result="";
-    if(playerSelect === computerselect){
+    if(playerSelect === computerSelect){
         result='Its a tie!! Rematch';
     }
-    else if(playerSelect==='rock' && computerselect==='scissors'){
+    else if(playerSelect==='rock' && computerSelect==='scissors'){
         result='player wins';
 
     }
-    else if(playerSelect==='paper' && computerselect==='rock'){
+    else if(playerSelect==='paper' && computerSelect==='rock'){
         result='player wins';
 
     }
-    else if(playerSelect ==='scissors' && computerselect ==='paper'){
+    else if(playerSelect ==='scissors' && computerSelect ==='paper'){
         result='player wins';
 
     }
@@ -36,7 +36,7 @@ function playRound(playerSelect){
     }
     
     playerChoice.textContent=`PLAYER: ${playerSelect}`;
-    computerChoice.textContent=`COMPUTER: ${computerselect}`;
+    computerChoice.textContent=`COMPUTER: ${computerSelect}`;
     resultDisplay.textContent=result;
 
     checkWinner(result);
