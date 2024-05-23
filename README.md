@@ -1,6 +1,7 @@
 # rock-paper-scissors
 
-I made rock paper scissors 
-in console
-learn to merge todya yay
+made rock paper scissor using js <br>
+i am going to continue workig to develop this game again <br>
+
+
 
