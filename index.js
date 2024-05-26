@@ -1,4 +1,4 @@
-const Choices = ['Rock', 'Paper', 'Scissors'];
+const Choices = ['Rock', 'Paper', 'Scissor'];
 const playerChoice = document.getElementById('playerselect');
 const computerChoice = document.getElementById('computerselect');
 const resultDisplay = document.getElementById('resultdisplay');
@@ -9,20 +9,16 @@ const winOrLose = document.getElementById('winorlose');
 let playerScore = 0;
 let computerScore = 0;
 
-
 //function to select player choice and show result
 
 function playRound(playerSelect) {
 
     const computerSelect = Choices[(Math.floor(Math.random() * Choices.length))];
     let result = "";
-    console.log(computerselect)
-    if (playerSelect === computerselect) {
+    if (playerSelect === computerSelect) {
         result = 'Its a tie!! Rematch';
-        console.log(playerSelect)
-        console.log(computerselect)
     }
-    else if (playerSelect === 'Rock' && computerSelect === 'Scissors') {
+    else if (playerSelect === 'Rock' && computerSelect === 'Scissor') {
         result = 'player wins';
 
     }
@@ -30,7 +26,7 @@ function playRound(playerSelect) {
         result = 'player wins';
 
     }
-    else if (playerSelect === 'Scissors' && computerSelect === 'Paper') {
+    else if (playerSelect === 'Scissor' && computerSelect === 'Paper') {
         result = 'player wins';
 
     }
@@ -39,37 +35,35 @@ function playRound(playerSelect) {
 
     }
 
-    playerChoice.textContent = `PLAYER: ${playerSelect}`;
 
-    displayimage(playerSelect,"image1")
-    displayimage(computerSelect,"image2")
+    displayimage(playerSelect, "image1")
+    displayimage(computerSelect, "image2")
 
-    computerChoice.textContent = `COMPUTER: ${computerSelect}`;
     resultDisplay.textContent = result;
 
     checkWinner(result);
 
     playerCount.textContent = 'Player Win: ' + playerScore;
-    computerCount.textContent = 'computer Win: ' + computerScore;
+    computerCount.textContent = 'Computer Win: ' + computerScore;
 
 
 }
 
-function displayimage(select,id){
-    var img = document.createElement("img");
-    if (select === "Rock"){
+function displayimage(select, id) {
+    let img = document.createElement("img");
+    if (select === "Rock") {
         img.src = "img/fist.png";
     }
-    else if (select === "Paper"){
+    else if (select === "Paper") {
         img.src = "img/hand-paper.png";
     }
-    else if (select === "Scissor"){
+    else if (select === "Scissor") {
         img.src = "img/scissors.png";
     }
-    else{
+    else {
         img.src = "dfsd"
     }
-    var src = document.getElementById(id);
+    let src = document.getElementById(id);
     src.innerHTML = "";
     src.appendChild(img);
 
