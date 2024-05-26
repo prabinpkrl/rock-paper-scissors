@@ -42,7 +42,7 @@ function playRound(playerSelect) {
     playerChoice.textContent = `PLAYER: ${playerSelect}`;
 
     displayimage(playerSelect,"image1")
-    displayimage(computerselect,"image2")
+    displayimage(computerSelect,"image2")
 
     computerChoice.textContent = `COMPUTER: ${computerSelect}`;
     resultDisplay.textContent = result;
