@@ -7,70 +7,93 @@ const computerCount=document.getElementById('computercount');
 const winOrLose=document.getElementById('winorlose');
 let playerScore=0;
 let computerScore=0;
-let results;
+let resultss;
 
 //function to select player choice and show result
 
 function playRound(playerSelect){
     
-    const computerSelect=Choices[(Math.floor(Math.random()*Choices.length))];
+    const computerselect=Choices[(Math.floor(Math.random()*Choices.length))];
     let result="";
-    if(playerSelect === computerSelect){
+    if(playerSelect === computerselect){
         result='Its a tie!! Rematch';
     }
-    else if(playerSelect==='rock' && computerSelect==='scissors'){
+    else if(playerSelect==='rock' && computerselect==='scissors'){
         result='player wins';
 
     }
-    else if(playerSelect==='paper' && computerSelect==='rock'){
+    else if(playerSelect==='paper' && computerselect==='rock'){
         result='player wins';
 
     }
-    else if(playerSelect ==='scissors' && computerSelect ==='paper'){
+    else if(playerSelect ==='scissors' && computerselect ==='paper'){
         result='player wins';
 
     }
-    else{
-        result='player lose!!';
-        
+    else {
+        result = 'player lose!!';
+
     }
     
     playerChoice.textContent=`PLAYER: ${playerSelect}`;
-    computerChoice.textContent=`COMPUTER: ${computerSelect}`;
+    computerChoice.textContent=`COMPUTER: ${computerselect}`;
     resultDisplay.textContent=result;
 
     checkWinner(result);
-    
-    playerCount.textContent= 'Player Win:'+ playerScore;
-    computerCount.textContent= 'computer Win:'+ computerScore;
+
+    playerCount.textContent = 'Player Win: ' + playerScore;
+    computerCount.textContent = 'computer Win: ' + computerScore;
 
 
 }
 
-function checkWinner(resultCheck){
-    if(resultCheck === 'player wins'){
+function displayimage(select,id){
+    var img = document.createElement("img");
+    if (select === "Rock"){
+        img.src = "img/fist.png";
+    }
+    else if (select === "Paper"){
+        img.src = "img/hand-paper.png";
+    }
+    else if (select === "Scissor"){
+        img.src = "img/scissors.png";
+    }
+    else{
+        img.src = "dfsd"
+    }
+    var src = document.getElementById(id);
+    src.innerHTML = "";
+    src.appendChild(img);
+
+}
+
+function checkWinner(resultCheck) {
+    if (resultCheck === 'player wins') {
         ++playerScore;
-        
+
     }
-    if(resultCheck === 'player lose!!'){
+    if (resultCheck === 'player lose!!') {
         ++computerScore;
-        
+
     }
-    win(playerScore,computerScore);
+    win(playerScore, computerScore);
 }
 
-function win(playerPoint,computerPoint){
-    if(playerPoint === 5){
-        winOrLose.textContent= 'You win!!';
-        
-    }
-    if(computerPoint === 5){
-        winOrLose.textContent= 'You loose!!';
+function win(playerPoint, computerPoint) {
+    if (playerPoint === 5) {
+        winOrLose.textContent = 'You win!!';
+
 
     }
+    if (computerPoint === 5) {
+        winOrLose.textContent = 'You loose!!';
+
+    }
+
+
 }
-function restart(){
-
+function restart() {
+    location.reload;
 
 }
 

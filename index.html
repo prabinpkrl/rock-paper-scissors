@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Rock-Paper-Scissor</title>
     <script src="index.js" defer></script>
 </head>
 <body>
-    <div id="playerselect">PLAYER:</div>
-    <div id="computerselect">COMPUTER:</div>
-    
+    <div class="select">
+        <div id="playerselect">PLAYER:</div>
+        <div id ="image1"></div>
+        <div id="computerselect">COMPUTER:</div>
+        <div id = "image2"></div>
+    </div>
     <div class="choice">
-        <button onclick="playRound('rock')">Rock</button>
-        <button onclick="playRound('paper')">Paper</button>
-        <button onclick="playRound('scissor')">Scissor</button>
+        <button class="Rock-hand" onclick="playRound('Rock')"><img src="img/fist.png" alt="hand-sign"></button>
+        <button onclick="playRound('Paper')"><img src="img/hand-paper.png" alt="hand paper"></button>
+        <button onclick="playRound('Scissor')"><img src="img/scissors.png" alt="hand scissors"></button>
         
     </div>
-    <div id="resultdisplay"></div>
-    <div id="playercount"></div>
-    <div id="computercount"></div>
-    <div id="winorlose"></div>
+    <div class="display">
+        <div id="resultdisplay"></div>
+        <div id="playercount"></div>
+        <div id="computercount"></div>
+        <div id="winorlose"></div>
+        <!-- <button onclick="restart()">Reset</button> -->
+    </div>
+    
 
     
     
