@@ -13,3 +13,23 @@ body{
     margin-bottom: 25%;
 
 }
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+img {
+    width: 70px;
+    height: 70px;
+  }
+#winorlose{
+    color: red;
+    font-size: large;
+    margin: 20px auto;
+    padding-left: 22px;
+}
+#image{
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
