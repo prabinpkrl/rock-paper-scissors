@@ -1,67 +1,69 @@
-const Choices=['rock', 'paper' ,'scissors'];
-const playerChoice=document.getElementById('playerselect');
-const computerChoice=document.getElementById('computerselect');
-const resultDisplay=document.getElementById('resultdisplay');
-const playerCount=document.getElementById('playercount');
-const computerCount=document.getElementById('computercount');
-const winOrLose=document.getElementById('winorlose');
-let playerScore=0;
-let computerScore=0;
-let resultss;
+const Choices = ['Rock', 'Paper', 'Scissor'];
+const playerChoice = document.getElementById('playerselect');
+const computerChoice = document.getElementById('computerselect');
+const resultDisplay = document.getElementById('resultdisplay');
+const playerCount = document.getElementById('playercount');
+const computerCount = document.getElementById('computercount');
+const winOrLose = document.getElementById('winorlose');
+// const buttonResult=document.querySelector('#buttonresult');
+let playerScore = 0;
+let computerScore = 0;
 
 //function to select player choice and show result
 
-function playRound(playerSelect){
-    
-    const computerselect=Choices[(Math.floor(Math.random()*Choices.length))];
-    let result="";
-    if(playerSelect === computerselect){
-        result='Its a tie!! Rematch';
+function playRound(playerSelect) {
+
+    const computerSelect = Choices[(Math.floor(Math.random() * Choices.length))];
+    let result = "";
+    if (playerSelect === computerSelect) {
+        result = 'Its a tie!! Rematch';
     }
-    else if(playerSelect==='rock' && computerselect==='scissors'){
-        result='player wins';
+    else if (playerSelect === 'Rock' && computerSelect === 'Scissor') {
+        result = 'player wins';
 
     }
-    else if(playerSelect==='paper' && computerselect==='rock'){
-        result='player wins';
+    else if (playerSelect === 'Paper' && computerSelect === 'Rock') {
+        result = 'player wins';
 
     }
-    else if(playerSelect ==='scissors' && computerselect ==='paper'){
-        result='player wins';
+    else if (playerSelect === 'Scissor' && computerSelect === 'Paper') {
+        result = 'player wins';
 
     }
     else {
         result = 'player lose!!';
 
     }
-    
-    playerChoice.textContent=`PLAYER: ${playerSelect}`;
-    computerChoice.textContent=`COMPUTER: ${computerselect}`;
-    resultDisplay.textContent=result;
+
+
+    displayimage(playerSelect, "image1")
+    displayimage(computerSelect, "image2")
+
+    resultDisplay.textContent = result;
 
     checkWinner(result);
 
     playerCount.textContent = 'Player Win: ' + playerScore;
-    computerCount.textContent = 'computer Win: ' + computerScore;
+    computerCount.textContent = 'Computer Win: ' + computerScore;
 
 
 }
 
-function displayimage(select,id){
-    var img = document.createElement("img");
-    if (select === "Rock"){
+function displayimage(select, id) {
+    let img = document.createElement("img");
+    if (select === "Rock") {
         img.src = "img/fist.png";
     }
-    else if (select === "Paper"){
+    else if (select === "Paper") {
         img.src = "img/hand-paper.png";
     }
-    else if (select === "Scissor"){
+    else if (select === "Scissor") {
         img.src = "img/scissors.png";
     }
-    else{
+    else {
         img.src = "dfsd"
     }
-    var src = document.getElementById(id);
+    let src = document.getElementById(id);
     src.innerHTML = "";
     src.appendChild(img);
 
