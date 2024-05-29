@@ -19,7 +19,7 @@ function playRound(playerSelect) {
         result = 'Its a tie!! Rematch';
     }
     else if (playerSelect === 'Rock' && computerSelect === 'Scissor') {
-        result = 'player wins';
+        result = `player wins!`;
 
     }
     else if (playerSelect === 'Paper' && computerSelect === 'Rock') {
@@ -78,24 +78,29 @@ function checkWinner(resultCheck) {
         ++computerScore;
 
     }
+
     win(playerScore, computerScore);
 }
+
+let interval = null;
 
 function win(playerPoint, computerPoint) {
     if (playerPoint === 5) {
         winOrLose.textContent = 'You win!!';
+        clearInterval(interval);
+        
 
 
     }
     if (computerPoint === 5) {
         winOrLose.textContent = 'You loose!!';
-
+        clearInterval(interval);
     }
-
+interval = setInterval(win,100);
 
 }
 function restart() {
-    location.reload;
+    location.reload();
 
 }
 
