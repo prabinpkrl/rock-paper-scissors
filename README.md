@@ -1,8 +1,7 @@
 # rock-paper-scissors
 
-made rock paper scissor using js <br>
-i am going to continue workig to develop this game again<br>
-ok
+Made rock paper scissor using Html css and javascript <br>
+Here You can play: [Play Here](https://rock-paper-scissors-prabin.vercel.app/)<br>
 
 
 
