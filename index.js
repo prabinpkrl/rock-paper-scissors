@@ -96,17 +96,10 @@ function win(playerPoint, computerPoint) {
         winOrLose.textContent = 'You loose!!';
 
     }
-interval = setInterval(win,100);
 
 }
 function restart() {
     location.reload();
 
 }
-
-
-
-
-
-
 
