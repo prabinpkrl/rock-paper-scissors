@@ -18,16 +18,16 @@ function playRound(playerSelect) {
     if (playerSelect === computerSelect) {
         result = 'Its a tie!! Rematch';
     }
-    else if (playerSelect === 'Rock' && computerSelect === 'Scissors') {
-        result = 'player wins';
+    else if (playerSelect === 'Rock' && computerSelect === 'Scissor') {
+        result = 'Player wins!';
 
     }
     else if (playerSelect === 'Paper' && computerSelect === 'Rock') {
-        result = 'Player wins';
+        result = 'Player wins!';
 
     }
-    else if (playerSelect === 'Scissors' && computerSelect === 'Paper') {
-        result = 'player wins';
+    else if (playerSelect === 'Scissor' && computerSelect === 'Paper') {
+        result = 'Player wins!';
 
     }
     else {
@@ -70,11 +70,11 @@ function displayimage(select, id) {
 }
 
 function checkWinner(resultCheck) {
-    if (resultCheck === 'player wins') {
+    if (resultCheck === 'Player wins!') {
         ++playerScore;
 
     }
-    if (resultCheck === 'player lose!!') {
+    if (resultCheck === 'Player lose!!') {
         ++computerScore;
 
     }
@@ -82,18 +82,15 @@ function checkWinner(resultCheck) {
     win(playerScore, computerScore);
 }
 
-let interval = null;
 
-let pwin= 'You win!!';
-let ploose= 'You loose!!';
 function win(playerPoint, computerPoint) {
     if (playerPoint === 5) {
-        winOrLose.textContent = 'You win!!';
+        winOrLose.innerHTML = `<span class="win">You win!! Lovely</span>`;
 
 
     }
     if (computerPoint === 5) {
-        winOrLose.textContent = 'You loose!!';
+        winOrLose.innerHTML = `<span class="loose">You loose!! Better Try Next time</span>`;
     }
 
 }
