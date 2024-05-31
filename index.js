@@ -94,12 +94,10 @@ function win(playerPoint, computerPoint) {
     }
     if (computerPoint === 5) {
         winOrLose.textContent = 'You loose!!';
-
     }
 
 }
 function restart() {
     location.reload();
-
 }
 
