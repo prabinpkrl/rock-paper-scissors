@@ -2,6 +2,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     
 }
@@ -13,23 +14,51 @@ body{
     margin-bottom: 25%;
 
 }
-button{
+
+.choice button{
     border: none;
     border-radius: 5px;
     padding: 15px;
+    cursor: pointer;
+
 }
 img {
     width: 70px;
     height: 70px;
+    
   }
 #winorlose{
-    color: red;
     font-size: large;
     margin: 20px auto;
     padding-left: 22px;
+}
+
+#winorlose .win{
+    color: rgb(0, 255, 85);
+}
+#winorlose .loose{
+    color: red;
 }
 #image{
     border: none;
     border-radius: 5px;
     padding: 15px;
+}
+.display{
+    width:40vw ;
+    margin: auto 0;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.display button{
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: medium;
+    border-radius: 10px;
+    background-color: red;
+}
+.display #resultdisplay{
+    border: 1px solid black; 
 }
