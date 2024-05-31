@@ -18,16 +18,16 @@ function playRound(playerSelect) {
     if (playerSelect === computerSelect) {
         result = 'Its a tie!! Rematch';
     }
-    else if (playerSelect === 'Rock' && computerSelect === 'Scissor') {
-        result = 'Player wins';
+    else if (playerSelect === 'Rock' && computerSelect === 'Scissors') {
+        result = 'player wins';
 
     }
     else if (playerSelect === 'Paper' && computerSelect === 'Rock') {
         result = 'Player wins';
 
     }
-    else if (playerSelect === 'Scissor' && computerSelect === 'Paper') {
-        result = 'Player wins';
+    else if (playerSelect === 'Scissors' && computerSelect === 'Paper') {
+        result = 'player wins';
 
     }
     else {
@@ -78,23 +78,25 @@ function checkWinner(resultCheck) {
         ++computerScore;
 
     }
+
     win(playerScore, computerScore);
 }
+
+let interval = null;
 
 let pwin= 'You win!!';
 let ploose= 'You loose!!';
 function win(playerPoint, computerPoint) {
     if (playerPoint === 5) {
-        winOrLose.innerHTML = `<span class="win">You Win!!</span>`;
+        winOrLose.textContent = 'You win!!';
 
 
     }
     if (computerPoint === 5) {
-        winOrLose.innerHTML = `<span class="loose">You loose!!</span>`;
-        
+        winOrLose.textContent = 'You loose!!';
 
     }
-
+interval = setInterval(win,100);
 
 }
 function restart() {
