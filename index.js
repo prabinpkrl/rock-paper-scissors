@@ -97,8 +97,6 @@ function stopAfterFive(player,computer){
 }
 
 
-
-
 function win(playerPoint, computerPoint) {
     if (playerPoint === 5) {
         winOrLose.innerHTML = `<span class="win">You win!! Lovely</span>`;
