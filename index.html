@@ -8,12 +8,14 @@
     <script src="index.js" defer></script>
 </head>
 <body>
+    
     <div class="select">
         <div id="playerselect">PLAYER:</div>
         <div id ="image1"></div>
         <div id="computerselect">COMPUTER:</div>
         <div id = "image2"></div>
     </div>
+    <div class="headermsg">Choose Any:</div>
     <div class="choice">
         <button class="Rock-hand" onclick="playRound('Rock')"><img src="img/fist.png" alt="hand-sign"></button>
         <button onclick="playRound('Paper')"><img src="img/hand-paper.png" alt="hand paper"></button>
@@ -27,7 +29,7 @@
             <div id="computercount"></div>
         </div>
         <div id="winorlose"></div>
-        <button onclick="restart()">Reset</button>
+        <button class="resetBtn">Reset</button>
         
     </div>
     
