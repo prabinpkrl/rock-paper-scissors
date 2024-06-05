@@ -15,6 +15,9 @@ let interval = null;
 //function to select player choice and show result
 
 function playRound(playerSelect) {
+    if(playerScore >=5 || computerScore >=5){
+        return;
+    }
 
     const computerSelect = Choices[(Math.floor(Math.random() * Choices.length))];
     let result = "";
